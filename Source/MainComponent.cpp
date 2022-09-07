@@ -3,6 +3,8 @@
 //==============================================================================
 MainComponent::MainComponent()
 {
+    addAndMakeVisible(toggleButton);
+   
     setSize (600, 400);
 }
 
@@ -18,7 +20,7 @@ void MainComponent::paint (juce::Graphics& g)
 
     g.setFont (juce::Font (40.0f));
     g.setColour (juce::Colours::blue);
-    g.drawText ("Hello World!arcaloop B H ", getLocalBounds(), juce::Justification::centred, true);
+    g.drawText ("Arca Loop B H ", getLocalBounds(), juce::Justification::centred, true);
 }
 
 void MainComponent::resized()
@@ -26,4 +28,5 @@ void MainComponent::resized()
     // This is called when the MainComponent is resized.
     // If you add any child components, this is where you should
     // update their positions.
+    toggleButton.setBounds(10, 10, 30, 50);
 }
